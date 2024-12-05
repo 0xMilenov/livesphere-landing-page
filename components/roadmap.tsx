@@ -188,8 +188,7 @@ export function Roadmap() {
                   </div>
 
                   <p className="font-medium italic mb-2">
-                    Expand the platform internationally with multi-language
-                    support.
+                    Expand the platform internationally.
                   </p>
 
                   <p className="font-medium italic mb-2">

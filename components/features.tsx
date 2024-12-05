@@ -90,7 +90,7 @@ const features = [
   {
     title: "Staking and Rewards",
     description:
-      "Users and viewers can stake LiveSphere tokens to earn rewards and participate in governance.",
+      "All users can stake LiveSphere tokens to earn rewards and participate in governance.",
     icon: Shield,
     bgColor: "bg-[#FDF6F4]",
     iconPosition: "top",

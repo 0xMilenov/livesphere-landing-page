@@ -48,7 +48,7 @@ const steps = [
     icon: Zap,
     title: "Rewards & Governance",
     description:
-      "Users stake tokens, earn rewards, and participate in platform governance decisions.",
+      "All users stake tokens, earn rewards, and participate in platform governance decisions.",
     color: "bg-[#40A798]",
   },
 ];
