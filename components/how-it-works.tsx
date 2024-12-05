@@ -55,13 +55,14 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-white to-[#E5F4F1]">
+    <section
+      className="py-20 px-4 bg-gradient-to-b from-white to-[#E5F4F1]"
+      id="how-it-works"
+    >
       <div className="container max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           How{" "}
-          <span className="font-['Covered_By_Your_Grace'] text-[#40A798]">
-            LiveSphere
-          </span>{" "}
+          <span className="font-covered-grace text-[#40A798]">LiveSphere</span>{" "}
           Works
         </h2>
 

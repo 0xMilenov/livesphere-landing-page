@@ -1,7 +1,19 @@
+"use client";
+
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+import { Youtube, MessageSquare, X } from "lucide-react";
 
 export function Footer() {
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string
+  ) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <footer className="bg-[#2D5545] text-white py-16 px-4">
       <div className="container max-w-6xl mx-auto">
@@ -20,6 +32,7 @@ export function Footer() {
                 <Link
                   href="#features"
                   className="hover:text-[#E97451] transition-colors"
+                  onClick={(e) => scrollToSection(e, "what-is-livesphere")}
                 >
                   Features
                 </Link>
@@ -28,14 +41,16 @@ export function Footer() {
                 <Link
                   href="#tokenomics"
                   className="hover:text-[#E97451] transition-colors"
+                  onClick={(e) => scrollToSection(e, "how-it-works")}
                 >
-                  Tokenomics
+                  How it works
                 </Link>
               </li>
               <li>
                 <Link
                   href="#roadmap"
                   className="hover:text-[#E97451] transition-colors"
+                  onClick={(e) => scrollToSection(e, "roadmap")}
                 >
                   Roadmap
                 </Link>
@@ -44,8 +59,9 @@ export function Footer() {
                 <Link
                   href="#faq"
                   className="hover:text-[#E97451] transition-colors"
+                  onClick={(e) => scrollToSection(e, "tokenomics")}
                 >
-                  FAQ
+                  Tokenomics
                 </Link>
               </li>
             </ul>
@@ -82,14 +98,19 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-[#E97451] transition-colors">
-                <Twitter size={24} />
+              <a
+                href="https://t.me/+yAfL2-MxN5w3MGY0"
+                className="hover:text-[#E97451] transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageSquare size={24} aria-label="Telegram" />
               </a>
               <a href="#" className="hover:text-[#E97451] transition-colors">
-                <Instagram size={24} />
+                <Youtube size={24} aria-label="YouTube" />
               </a>
               <a href="#" className="hover:text-[#E97451] transition-colors">
-                <Youtube size={24} />
+                <X size={24} aria-label="X" />
               </a>
             </div>
           </div>

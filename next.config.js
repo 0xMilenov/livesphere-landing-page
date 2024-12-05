@@ -6,6 +6,13 @@ const nextConfig = {
   // Disable x-powered-by header for security
   poweredByHeader: false,
 
+  eslint: {
+    // Remove useEslintrc and extensions properties if they exist
+    // Only keep the essential ESLint config here
+    dirs: ["pages", "components", "lib", "src"], // Optional: specify directories to lint
+    ignoreDuringBuilds: false, // Optional: set to true to ignore ESLint errors during builds
+  },
+
   // Configure image domains if you're using next/image
   images: {
     domains: [

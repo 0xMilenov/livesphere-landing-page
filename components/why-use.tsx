@@ -4,33 +4,24 @@ export function WhyUse() {
       <div className="container max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">
           Why use{" "}
-          <span className="font-['Covered_By_Your_Grace'] text-[#009387]">
-            LiveSphere
-          </span>
-          ?
+          <span className="font-covered-grace text-[#009387]">LiveSphere</span>?
         </h2>
 
         <div className="text-center mb-16">
           <h3 className="text-3xl md:text-4xl font-bold mb-4">
             It{" "}
-            <span className="font-['Covered_By_Your_Grace'] text-[#009387]">
-              doesn't
-            </span>{" "}
+            <span className="font-covered-grace text-[#009387]">doesn't</span>{" "}
             collect{" "}
-            <span className="font-['Covered_By_Your_Grace'] text-[#009387] text-5xl">
+            <span className="font-covered-grace text-[#009387] text-5xl">
               {">"}20%
             </span>{" "}
             of your earnings.
           </h3>
           <h3 className="text-3xl md:text-4xl font-bold">
             Everything{" "}
-            <span className="font-['Covered_By_Your_Grace'] text-[#009387]">
-              happens
-            </span>{" "}
+            <span className="font-covered-grace text-[#009387]">happens</span>{" "}
             on the blockchain.{" "}
-            <span className="font-['Covered_By_Your_Grace'] text-[#009387]">
-              IYKYK
-            </span>
+            <span className="font-covered-grace text-[#009387]">IYKYK</span>
           </h3>
         </div>
 

@@ -1,13 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { ChevronDown } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 const faqs = [
   {
@@ -38,7 +32,7 @@ const faqs = [
 ];
 
 export function FAQ() {
-  const [selectedAnswer, setSelectedAnswer] = useState(faqs[0].answer);
+  const [selectedQuestion, setSelectedQuestion] = useState(faqs[0].question);
 
   return (
     <section className="py-20 px-4">
@@ -47,38 +41,38 @@ export function FAQ() {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h2 className="text-[#2D5545] text-4xl font-bold mb-8">FAQs.</h2>
-              <Accordion
-                type="single"
-                collapsible
-                className="space-y-4"
-                onValueChange={(value) => {
-                  const selected = faqs.find((faq) => faq.question === value);
-                  if (selected) {
-                    setSelectedAnswer(selected.answer);
-                  }
-                }}
-              >
+              <div className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <AccordionItem
+                  <button
                     key={index}
-                    value={faq.question}
-                    className="border-none"
+                    onClick={() => setSelectedQuestion(faq.question)}
+                    className={`w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-gray-100 group ${
+                      selectedQuestion === faq.question
+                        ? "bg-gray-200"
+                        : "bg-gray-50"
+                    }`}
                   >
-                    <div className="space-y-1">
-                      <AccordionTrigger className="bg-gray-50 px-4 py-3 rounded-lg hover:no-underline hover:bg-gray-100 group">
-                        <span className="font-medium">{faq.question}</span>
-                      </AccordionTrigger>
-                    </div>
-                  </AccordionItem>
+                    <span className="font-medium">{faq.question}</span>
+                    <ChevronRight
+                      className={`h-4 w-4 transition-transform ${
+                        selectedQuestion === faq.question ? "" : "rotate-180"
+                      }`}
+                    />
+                  </button>
                 ))}
-              </Accordion>
+              </div>
             </div>
 
             <div>
               <h2 className="text-[#2D5545] text-4xl font-bold mb-8">Ans.</h2>
               <div className="bg-[#FFD84D] p-8 rounded-lg">
                 <div className="w-4 h-4 bg-black rounded-full mb-4"></div>
-                <p className="text-black text-lg">{selectedAnswer}</p>
+                <p className="text-black text-lg">
+                  {
+                    faqs.find((faq) => faq.question === selectedQuestion)
+                      ?.answer
+                  }
+                </p>
               </div>
             </div>
           </div>

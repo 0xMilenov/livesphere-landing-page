@@ -1,6 +1,6 @@
 export function Roadmap() {
   return (
-    <section className="py-20 px-4 bg-[#FDF6F4] relative">
+    <section className="py-20 px-4 bg-[#FDF6F4] relative" id="roadmap">
       <div className="container max-w-6xl mx-auto relative">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 relative z-10">
           Roadmap
@@ -14,7 +14,7 @@ export function Roadmap() {
             <div className="absolute left-1/2 top-1/2 w-6 h-6 bg-[#40A798] rounded-full transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
             <div className="md:text-right md:pr-8">
               <h3 className="mb-2">
-                <span className="font-['Covered_By_Your_Grace'] text-[#40A798] text-4xl">
+                <span className="font-covered-grace text-[#40A798] text-4xl">
                   Phase 1:
                 </span>
                 <br />
@@ -100,7 +100,7 @@ export function Roadmap() {
 
             <div className="md:pl-8">
               <h3 className="mb-2">
-                <span className="font-['Covered_By_Your_Grace'] text-[#40A798] text-4xl">
+                <span className="font-covered-grace text-[#40A798] text-4xl">
                   Phase 2:
                 </span>
                 <br />
@@ -117,7 +117,7 @@ export function Roadmap() {
             <div className="absolute left-1/2 top-1/2 w-6 h-6 bg-[#40A798] rounded-full transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
             <div className="md:text-right md:pr-8">
               <h3 className="mb-2">
-                <span className="font-['Covered_By_Your_Grace'] text-[#40A798] text-4xl">
+                <span className="font-covered-grace text-[#40A798] text-4xl">
                   Phase 3:
                 </span>
                 <br />
@@ -202,7 +202,7 @@ export function Roadmap() {
 
             <div className="md:pl-8">
               <h3 className="mb-2">
-                <span className="font-['Covered_By_Your_Grace'] text-[#40A798] text-4xl">
+                <span className="font-covered-grace text-[#40A798] text-4xl">
                   Phase 4:
                 </span>
                 <br />

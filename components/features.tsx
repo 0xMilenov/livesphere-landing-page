@@ -9,24 +9,24 @@ import {
   Users,
 } from "lucide-react";
 
+import staking from "@/public/other LS/staking.png";
+import coins from "@/public/other LS/coins.png";
+import coin from "@/public/other LS/coin.png";
+import blockchain from "@/public/other LS/blockchain.png";
+import tipping from "@/public/other LS/tipping.png";
+import chatting from "@/public/other LS/chatting.png";
+
 const features = [
   {
     title: "Broadcaster Tokens",
     description:
       "Broadcasters mint their unique tokens to represent their brand. Viewers can buy, sell, and trade these tokens to support their favorite creators.",
     icon: Broadcast,
-    bgColor: "bg-[#FDF6F4]",
+    bgColor: "bg-[#F5F2FF]",
     iconPosition: "top",
     demo: (
-      <div className="w-full aspect-video bg-white/50 rounded-lg p-4 flex items-center justify-center">
-        <div className="grid grid-cols-2 gap-2">
-          <div className="flex items-center justify-center size-12 bg-[#E97451] rounded-full">
-            <Broadcast className="text-white" />
-          </div>
-          <div className="flex items-center justify-center size-12 bg-[#40A798] rounded-full">
-            <Coins className="text-white" />
-          </div>
-        </div>
+      <div className="w-full aspect-video bg-white rounded-lg p-4 flex items-center justify-center">
+        <Image src={coins} alt="Coin icon" width={170} height={170} />
       </div>
     ),
   },
@@ -38,13 +38,14 @@ const features = [
     bgColor: "bg-[#E5F4F1]",
     iconPosition: "bottom",
     demo: (
-      <div className="w-full aspect-video bg-white/50 rounded-lg p-4">
-        <div className="w-full h-full flex items-center justify-center">
-          <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-            <Coins className="text-[#40A798]" />
-            <span className="font-medium">1000 LS</span>
-          </div>
-        </div>
+      <div className="w-full aspect-video bg-white rounded-lg p-4 flex items-center justify-center">
+        <Image
+          src={coin}
+          alt="Coin icon 2"
+          width={170}
+          height={170}
+          className="text-white"
+        />
       </div>
     ),
   },
@@ -53,20 +54,17 @@ const features = [
     description:
       "Viewers tip LS Tokens directly during live streams, providing broadcasters with immediate income.",
     icon: Zap,
-    bgColor: "bg-[#F5F2FF]",
+    bgColor: "bg-[#FDF6F4]",
     iconPosition: "top",
     demo: (
-      <div className="w-full aspect-video bg-white/50 rounded-lg p-4">
-        <div className="flex flex-col items-center justify-center h-full gap-2">
-          <div className="flex items-center gap-1 text-sm">
-            <div className="h-2 w-2 rounded-full bg-green-500"></div>
-            Live Tips
-          </div>
-          <div className="flex items-baseline gap-1">
-            <span className="text-2xl font-bold">2,145</span>
-            <span className="text-green-500">↑12%</span>
-          </div>
-        </div>
+      <div className="w-full aspect-video bg-white rounded-lg p-4 flex items-center justify-center">
+        <Image
+          src={tipping}
+          alt="Coin icon 3"
+          width={170}
+          height={170}
+          className="text-white"
+        />
       </div>
     ),
   },
@@ -78,16 +76,14 @@ const features = [
     bgColor: "bg-[#E5F4F1]",
     iconPosition: "bottom",
     demo: (
-      <div className="w-full aspect-video bg-white/50 rounded-lg p-4">
-        <div className="flex flex-col h-full">
-          <div className="flex items-center gap-2 mb-2">
-            <div className="size-2 rounded-full bg-green-500"></div>
-            <span className="text-sm">Chat Active</span>
-          </div>
-          <div className="flex-1 flex items-end">
-            <div className="w-full h-1/2 bg-white rounded-lg"></div>
-          </div>
-        </div>
+      <div className="w-full aspect-video bg-white rounded-lg p-4 flex items-center justify-center">
+        <Image
+          src={chatting}
+          alt="Coin icon 4"
+          width={170}
+          height={170}
+          className="text-white"
+        />
       </div>
     ),
   },
@@ -99,14 +95,14 @@ const features = [
     bgColor: "bg-[#FDF6F4]",
     iconPosition: "top",
     demo: (
-      <div className="w-full aspect-video bg-white/50 rounded-lg p-4">
-        <div className="h-full flex items-center justify-center">
-          <div className="grid grid-cols-3 gap-1">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="size-4 bg-[#40A798] rounded-sm"></div>
-            ))}
-          </div>
-        </div>
+      <div className="w-full aspect-video bg-white rounded-lg p-4 flex items-center justify-center">
+        <Image
+          src={staking}
+          alt="Coin icon 5"
+          width={170}
+          height={170}
+          className="text-white"
+        />
       </div>
     ),
   },
@@ -118,14 +114,14 @@ const features = [
     bgColor: "bg-[#F5F2FF]",
     iconPosition: "bottom",
     demo: (
-      <div className="w-full aspect-video bg-white/50 rounded-lg p-4">
-        <div className="h-full flex items-center justify-center">
-          <div className="flex items-center gap-2">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="size-2 rounded-full bg-[#40A798]"></div>
-            ))}
-          </div>
-        </div>
+      <div className="w-full aspect-video bg-white rounded-lg p-4 flex items-center justify-center">
+        <Image
+          src={blockchain}
+          alt="Coin icon 6"
+          width={170}
+          height={170}
+          className="text-white"
+        />
       </div>
     ),
   },
@@ -133,14 +129,11 @@ const features = [
 
 export function Features() {
   return (
-    <section className="py-20 px-4">
+    <section className="py-20 px-4" id="what-is-livesphere">
       <div className="container max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           What is{" "}
-          <span className="font-['Covered_By_Your_Grace'] text-[#40A798]">
-            LiveSphere
-          </span>
-          ?
+          <span className="font-covered-grace text-[#40A798]">LiveSphere</span>?
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">

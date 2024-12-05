@@ -10,12 +10,12 @@ const tokenDistribution: TokenDistributionItem[] = [
   {
     name: "Platform Development and Operations",
     percentage: 30,
-    color: "bg-[#40A798]",
+    color: "#40A798",
   },
-  { name: "Staking Rewards", percentage: 25, color: "bg-[#E97451]" },
-  { name: "Marketing and Growth Fund", percentage: 20, color: "bg-[#FFD84D]" },
-  { name: "Liquidity Pool", percentage: 15, color: "bg-[#6B7280]" },
-  { name: "Team Allocation", percentage: 10, color: "bg-[#4B5563]" },
+  { name: "Staking Rewards", percentage: 25, color: "#E97451" },
+  { name: "Marketing and Growth Fund", percentage: 20, color: "#FFD84D" },
+  { name: "Liquidity Pool", percentage: 15, color: "#D32F2F" },
+  { name: "Team Allocation", percentage: 10, color: "#1E40AF" },
 ];
 
 export function Tokenomics() {
@@ -32,7 +32,10 @@ export function Tokenomics() {
   };
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-[#E5F4F1] to-white">
+    <section
+      className="py-20 px-4 bg-gradient-to-b from-[#E5F4F1] to-white"
+      id="tokenomics"
+    >
       <div className="container max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           Tokenomics
@@ -43,8 +46,8 @@ export function Tokenomics() {
             LS Token Distribution
           </h3>
 
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-            <div className="w-64 h-64 relative shrink-0">
+          <div className="flex flex-col md:flex-row items-center md:items-center gap-8 justify-center">
+            <div className="w-64 h-64 relative shrink-0 md:w-1/2 max-w-[256px]">
               <svg viewBox="0 0 100 100" className="w-full h-full">
                 {
                   tokenDistribution.reduce(
@@ -59,11 +62,7 @@ export function Tokenomics() {
                       );
 
                       acc.elements.push(
-                        <path
-                          key={item.name}
-                          d={path}
-                          fill={item.color.replace("bg-", "")}
-                        />
+                        <path key={item.name} d={path} fill={item.color} />
                       );
 
                       acc.totalPercentage += item.percentage;
@@ -75,14 +74,17 @@ export function Tokenomics() {
               </svg>
             </div>
 
-            <div className="flex-1 space-y-4 w-full">
+            <div className="flex-1 space-y-4 w-full md:w-1/2 max-w-sm">
               {tokenDistribution.map((item) => (
                 <div
                   key={item.name}
                   className="flex items-center justify-between gap-4"
                 >
                   <div className="flex items-center gap-2">
-                    <div className={`w-4 h-4 rounded-full ${item.color}`}></div>
+                    <div
+                      className="w-4 h-4 rounded-full"
+                      style={{ backgroundColor: item.color }}
+                    ></div>
                     <span className="font-medium">{item.name}:</span>
                   </div>
                   <span className="font-bold">{item.percentage}%</span>
