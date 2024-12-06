@@ -1,24 +1,24 @@
 export function Roadmap() {
   return (
-    <section className="py-20 px-4 bg-[#FDF6F4] relative" id="roadmap">
+    <section className="py-12 md:py-20 px-4 bg-[#FDF6F4] relative" id="roadmap">
       <div className="container max-w-6xl mx-auto relative">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 relative z-10">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16 relative z-10">
           Roadmap
         </h2>
 
-        <div className="absolute left-1/2 top-[120px] bottom-[120px] w-px bg-gray-300 transform -translate-x-1/2"></div>
+        <div className="hidden md:block absolute left-1/2 top-[120px] bottom-[120px] w-px bg-gray-300 transform -translate-x-1/2"></div>
 
-        <div className="space-y-24 relative">
+        <div className="space-y-12 md:space-y-24 relative">
           {/* Phase 1 */}
-          <div className="grid md:grid-cols-2 gap-8 items-center relative">
-            <div className="absolute left-1/2 top-1/2 w-6 h-6 bg-[#40A798] rounded-full transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
-            <div className="md:text-right md:pr-8">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center relative">
+            <div className="hidden md:block absolute left-1/2 top-1/2 w-6 h-6 bg-[#40A798] rounded-full transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
+            <div className="text-center md:text-right md:pr-8">
               <h3 className="mb-2">
-                <span className="font-covered-grace text-[#40A798] text-4xl">
+                <span className="font-covered-grace text-[#40A798] text-3xl md:text-4xl">
                   Phase 1:
                 </span>
                 <br />
-                <span className="text-3xl md:text-4xl font-bold">
+                <span className="text-2xl md:text-3xl lg:text-4xl font-bold">
                   Foundation & Launch
                 </span>
               </h3>
@@ -26,8 +26,8 @@ export function Roadmap() {
             </div>
 
             <div>
-              <div className="bg-white rounded-2xl p-8 shadow-sm">
-                <div className="space-y-6">
+              <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
+                <div className="space-y-4 md:space-y-6">
                   <div>
                     <p className="font-medium italic mb-2">
                       Develop and audit smart contracts for:
@@ -62,11 +62,11 @@ export function Roadmap() {
           </div>
 
           {/* Phase 2 */}
-          <div className="grid md:grid-cols-2 gap-8 items-center relative">
-            <div className="absolute left-1/2 top-1/2 w-6 h-6 bg-[#40A798] rounded-full transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
-            <div>
-              <div className="bg-white rounded-2xl p-8 shadow-sm">
-                <div className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center relative">
+            <div className="hidden md:block absolute left-1/2 top-1/2 w-6 h-6 bg-[#40A798] rounded-full transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
+            <div className="md:order-1 order-2">
+              <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
+                <div className="space-y-4 md:space-y-6">
                   <p className="font-medium italic mb-2">
                     Introduce staking rewards for LS Token holders.
                   </p>
@@ -98,13 +98,13 @@ export function Roadmap() {
               </div>
             </div>
 
-            <div className="md:pl-8">
+            <div className="text-center md:text-left md:pl-8 order-1 md:order-2">
               <h3 className="mb-2">
-                <span className="font-covered-grace text-[#40A798] text-4xl">
+                <span className="font-covered-grace text-[#40A798] text-3xl md:text-4xl">
                   Phase 2:
                 </span>
                 <br />
-                <span className="text-3xl md:text-4xl font-bold">
+                <span className="text-2xl md:text-3xl lg:text-4xl font-bold">
                   Ecosystem Growth
                 </span>
               </h3>
@@ -113,15 +113,15 @@ export function Roadmap() {
           </div>
 
           {/* Phase 3 */}
-          <div className="grid md:grid-cols-2 gap-8 items-center relative">
-            <div className="absolute left-1/2 top-1/2 w-6 h-6 bg-[#40A798] rounded-full transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
-            <div className="md:text-right md:pr-8">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center relative">
+            <div className="hidden md:block absolute left-1/2 top-1/2 w-6 h-6 bg-[#40A798] rounded-full transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
+            <div className="text-center md:text-right md:pr-8">
               <h3 className="mb-2">
-                <span className="font-covered-grace text-[#40A798] text-4xl">
+                <span className="font-covered-grace text-[#40A798] text-3xl md:text-4xl">
                   Phase 3:
                 </span>
                 <br />
-                <span className="text-3xl md:text-4xl font-bold">
+                <span className="text-2xl md:text-3xl lg:text-4xl font-bold">
                   Advanced Features
                 </span>
               </h3>
@@ -129,8 +129,8 @@ export function Roadmap() {
             </div>
 
             <div>
-              <div className="bg-white rounded-2xl p-8 shadow-sm">
-                <div className="space-y-6">
+              <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
+                <div className="space-y-4 md:space-y-6">
                   <div>
                     <p className="font-medium italic mb-2">
                       Enable NFT creation milestones:
@@ -170,11 +170,24 @@ export function Roadmap() {
           </div>
 
           {/* Phase 4 */}
-          <div className="grid md:grid-cols-2 gap-8 items-center relative">
-            <div className="absolute left-1/2 top-1/2 w-6 h-6 bg-[#40A798] rounded-full transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
-            <div>
-              <div className="bg-white rounded-2xl p-8 shadow-sm">
-                <div className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center relative">
+            <div className="hidden md:block absolute left-1/2 top-1/2 w-6 h-6 bg-[#40A798] rounded-full transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
+            <div className="text-center md:hidden order-1">
+              <h3 className="mb-2">
+                <span className="font-covered-grace text-[#40A798] text-3xl md:text-4xl">
+                  Phase 4:
+                </span>
+                <br />
+                <span className="text-2xl md:text-3xl lg:text-4xl font-bold">
+                  Gamification & Expansion
+                </span>
+              </h3>
+              <p className="text-gray-600">(12 – 15 Months)</p>
+            </div>
+
+            <div className="order-2 md:order-1">
+              <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
+                <div className="space-y-4 md:space-y-6">
                   <div>
                     <p className="font-medium italic mb-2">
                       Add gamified milestones:
@@ -199,13 +212,13 @@ export function Roadmap() {
               </div>
             </div>
 
-            <div className="md:pl-8">
+            <div className="hidden md:block md:pl-8 md:order-2">
               <h3 className="mb-2">
-                <span className="font-covered-grace text-[#40A798] text-4xl">
+                <span className="font-covered-grace text-[#40A798] text-3xl md:text-4xl">
                   Phase 4:
                 </span>
                 <br />
-                <span className="text-3xl md:text-4xl font-bold">
+                <span className="text-2xl md:text-3xl lg:text-4xl font-bold">
                   Gamification & Expansion
                 </span>
               </h3>

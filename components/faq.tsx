@@ -35,26 +35,30 @@ export function FAQ() {
   const [selectedQuestion, setSelectedQuestion] = useState(faqs[0].question);
 
   return (
-    <section className="py-20 px-4">
+    <section className="py-12 md:py-20 px-4">
       <div className="container max-w-6xl mx-auto">
-        <div className="border-2 border-black rounded-2xl p-8 md:p-12">
-          <div className="grid md:grid-cols-2 gap-8">
+        <div className="border-2 border-black rounded-2xl p-6 md:p-12">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             <div>
-              <h2 className="text-[#2D5545] text-4xl font-bold mb-8">FAQs.</h2>
-              <div className="space-y-4">
+              <h2 className="text-[#2D5545] text-3xl md:text-4xl font-bold mb-6 md:mb-8">
+                FAQs.
+              </h2>
+              <div className="space-y-3 md:space-y-4">
                 {faqs.map((faq, index) => (
                   <button
                     key={index}
                     onClick={() => setSelectedQuestion(faq.question)}
-                    className={`w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-gray-100 group ${
+                    className={`w-full flex items-center justify-between px-3 md:px-4 py-2.5 md:py-3 rounded-lg hover:bg-gray-100 group text-left ${
                       selectedQuestion === faq.question
                         ? "bg-gray-200"
                         : "bg-gray-50"
                     }`}
                   >
-                    <span className="font-medium">{faq.question}</span>
+                    <span className="font-medium text-sm md:text-base pr-2">
+                      {faq.question}
+                    </span>
                     <ChevronRight
-                      className={`h-4 w-4 transition-transform ${
+                      className={`h-4 w-4 shrink-0 transition-transform ${
                         selectedQuestion === faq.question ? "" : "rotate-180"
                       }`}
                     />
@@ -63,11 +67,13 @@ export function FAQ() {
               </div>
             </div>
 
-            <div>
-              <h2 className="text-[#2D5545] text-4xl font-bold mb-8">Ans.</h2>
-              <div className="bg-[#FFD84D] p-8 rounded-lg">
-                <div className="w-4 h-4 bg-black rounded-full mb-4"></div>
-                <p className="text-black text-lg">
+            <div className="mt-6 md:mt-0">
+              <h2 className="text-[#2D5545] text-3xl md:text-4xl font-bold mb-6 md:mb-8">
+                Ans.
+              </h2>
+              <div className="bg-[#FFD84D] p-6 md:p-8 rounded-lg">
+                <div className="w-3 h-3 md:w-4 md:h-4 bg-black rounded-full mb-4"></div>
+                <p className="text-black text-base md:text-lg">
                   {
                     faqs.find((faq) => faq.question === selectedQuestion)
                       ?.answer

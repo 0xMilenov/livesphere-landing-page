@@ -33,21 +33,21 @@ export function Tokenomics() {
 
   return (
     <section
-      className="py-20 px-4 bg-gradient-to-b from-[#E5F4F1] to-white"
+      className="py-12 md:py-20 px-4 bg-gradient-to-b from-[#E5F4F1] to-white"
       id="tokenomics"
     >
       <div className="container max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16">
           Tokenomics
         </h2>
 
-        <Card className="p-8 md:p-12 max-w-4xl mx-auto bg-white shadow-lg">
-          <h3 className="text-3xl font-bold mb-8 text-center">
+        <Card className="p-6 md:p-12 max-w-4xl mx-auto bg-white shadow-lg">
+          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">
             LS Token Distribution
           </h3>
 
-          <div className="flex flex-col md:flex-row items-center md:items-center gap-8 justify-center">
-            <div className="w-64 h-64 relative shrink-0 md:w-1/2 max-w-[256px]">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 justify-center">
+            <div className="w-56 h-56 md:w-64 md:h-64 relative shrink-0">
               <svg viewBox="0 0 100 100" className="w-full h-full">
                 {
                   tokenDistribution.reduce(
@@ -78,16 +78,20 @@ export function Tokenomics() {
               {tokenDistribution.map((item) => (
                 <div
                   key={item.name}
-                  className="flex items-center justify-between gap-4"
+                  className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4"
                 >
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 flex-1">
                     <div
-                      className="w-4 h-4 rounded-full"
+                      className="w-3 h-3 md:w-4 md:h-4 rounded-full shrink-0"
                       style={{ backgroundColor: item.color }}
                     ></div>
-                    <span className="font-medium">{item.name}:</span>
+                    <span className="text-sm md:text-base font-medium">
+                      {item.name}
+                    </span>
                   </div>
-                  <span className="font-bold">{item.percentage}%</span>
+                  <span className="text-sm md:text-base font-bold ml-5 sm:ml-0">
+                    {item.percentage}%
+                  </span>
                 </div>
               ))}
             </div>

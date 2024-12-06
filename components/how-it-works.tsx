@@ -13,7 +13,7 @@ const steps = [
     icon: Broadcast,
     title: "Create & Stream",
     description:
-      "Broadcasters set up their channel and start streaming content to their audience.",
+      "Broadcasters complete a quick KYC process to verify their identity, set up their channel, and start streaming content to their audience.",
     color: "bg-[#E97451]",
   },
   {

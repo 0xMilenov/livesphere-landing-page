@@ -12,7 +12,7 @@ import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className={`${inter.className} ${montserrat.variable}`}>
+    <div className={`${inter.className} ${montserrat.variable} min-h-screen`}>
       <main>
         <Navbar />
         <Hero />

@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Youtube, MessageSquare, X } from "lucide-react";
+import { Youtube, X } from "lucide-react";
+import { FaTelegram } from "react-icons/fa";
 
 export function Footer() {
   const scrollToSection = (
@@ -104,7 +105,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MessageSquare size={24} aria-label="Telegram" />
+                <FaTelegram size={24} aria-label="Telegram" />
               </a>
               <a href="#" className="hover:text-[#E97451] transition-colors">
                 <Youtube size={24} aria-label="YouTube" />
